@@ -1,0 +1,4 @@
+#ignorando los archivos de imagenes en assets
+assets/*.png
+assets/*.jpg
+assets/*.svg
