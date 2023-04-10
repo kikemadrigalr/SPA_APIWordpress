@@ -35,3 +35,23 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+.error{
+    padding: 1rem;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.loader {
+    /* color: #01579b; */
+    background-color: #01579b;
+    border-radius: 50%;
+
+    margin: 1rem auto;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+}
