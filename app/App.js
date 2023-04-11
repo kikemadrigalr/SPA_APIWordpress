@@ -5,17 +5,29 @@ import { ajax } from "./helpers/ajax.js" // importar funcion para peticiones aja
 // import { Title } from "./components/Title.js";
 import { Loader } from "./components/Loader.js";
 import { Header } from "./components/Header.js";
+import { Posts } from "./components/Posts.js";
+import { PostCard } from "./components/PostCard.js";
 
 export function App(){
  const d = document,
     $root = d.getElementById("root");
     $root.appendChild(Header());
+    $root.appendChild(Posts());
     $root.appendChild(Loader());
 
-    // ajax({
-    //     url: "no-valid",
-    //     cdSucces : () => {}
-    // });
+    ajax({
+        url: api.POSTS,
+        cbSuccess : (posts) => {
+            console.log(posts);
+            let html = "";
+            posts.forEach(post => {
+                console.log(post.lenght)
+                html += PostCard(post);
+                d.querySelector(".loader").style.display ="none";
+                d.getElementById("post").innerHTML = html;
+            });
+        }
+    });
 }
 
 // export function App(){
