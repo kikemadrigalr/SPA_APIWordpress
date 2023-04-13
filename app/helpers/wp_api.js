@@ -1,7 +1,7 @@
 // archivo de consulta a la API de wordpress
 //https://developer.wordpress.org/rest-api/
 
-const NAME = "malvestida", //nombre del sitio
+const NAME = "css-tricks", //nombre del sitio css-tricks
 DOMAIN = `http://${NAME}.com`, // URL del sitio
 SITE = `${DOMAIN}/wp-json`,
 API_WP = `${SITE}/wp/v2`, //Ruta para acceder a toda la informacion del API del sitio
